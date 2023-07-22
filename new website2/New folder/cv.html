@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Generator</title>
+  <link rel="stylesheet" type="text/css" href="cv.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Generator</h1>
+    <form id="resumeForm">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" required>
+      </fieldset>
+      <fieldset>
+        <legend>Objective</legend>
+        <label for="objective">Objective:</label>
+        <textarea id="objective" required></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Education</legend>
+        <div class="education">
+          <div class="edu-row">
+            <label for="edu-degree1">Degree:</label>
+            <input type="text" id="edu-degree1" required>
+            <label for="edu-school1">School:</label>
+            <input type="text" id="edu-school1" required>
+            <label for="edu-year1">Year:</label>
+            <input type="text" id="edu-year1" required>
+            <button type="button" class="removeBtn">Remove</button>
+          </div>
+          <div class="edu-row">
+            <label for="edu-degree2">Degree:</label>
+            <input type="text" id="edu-degree2">
+            <label for="edu-school2">School:</label>
+            <input type="text" id="edu-school2">
+            <label for="edu-year2">Year:</label>
+            <input type="text" id="edu-year2">
+            <button type="button" class="removeBtn">Remove</button>
+          </div>
+        </div>
+        <button type="button" id="addMoreEducation">Add More Education</button>
+      </fieldset>
+      <fieldset>
+        <legend>Experience</legend>
+        <div class="experience">
+          <div class="exp-row">
+            <label for="exp-title1">Title:</label>
+            <input type="text" id="exp-title1" required>
+            <label for="exp-company1">Company:</label>
+            <input type="text" id="exp-company1" required>
+            <label for="exp-year1">Year:</label>
+            <input type="text" id="exp-year1" required>
+            <button type="button" class="removeBtn">Remove</button>
+          </div>
+          <div class="exp-row">
+            <label for="exp-title2">Title:</label>
+            <input type="text" id="exp-title2">
+            <label for="exp-company2">Company:</label>
+            <input type="text" id="exp-company2">
+            <label for="exp-year2">Year:</label>
+            <input type="text" id="exp-year2">
+            <button type="button" class="removeBtn">Remove</button>
+          </div>
+        </div>
+        <button type="button" id="addMoreExperience">Add More Experience</button>
+      </fieldset>
+      <fieldset>
+        <legend>Languages</legend>
+        <div class="languages">
+          <div class="lang-row">
+            <label for="lang1">Language:</label>
+            <input type="text" id="lang1" required>
+            <label for="lang-level1">Level:</label>
+            <input type="text" id="lang-level1" required>
+            <button type="button" class="removeBtn">Remove</button>
+          </div>
+          <div class="lang-row">
+            <label for="lang2">Language:</label>
+            <input type="text" id="lang2">
+            <label for="lang-level2">Level:</label>
+            <input type="text" id="lang-level2">
+            <button type="button" class="removeBtn">Remove</button>
+          </div>
+        </div>
+        <button type="button" id="addMoreLanguage">Add More Language</button>
+      </fieldset>
+      <fieldset>
+        <legend>Skills</legend>
+        <div class="skills">
+          <div class="skill-row">
+            <label for="skill1">Skill:</label>
+            <input type="text" id="skill1" required>
+            <button type="button" class="removeBtn">Remove</button>
+          </div>
+          <div class="skill-row">
+            <label for="skill2">Skill:</label>
+            <input type="text" id="skill2">
+            <button type="button" class="removeBtn">Remove</button>
+          </div>
+        </div>
+        <button type="button" id="addMoreSkills">Add More Skills</button>
+      </fieldset>
+      <fieldset>
+        <legend>Upload Image</legend>
+        <label for="image">Image:</label>
+        <input type="file" id="image" accept="image/*">
+      </fieldset>
+      <fieldset>
+        <legend>Upload Signature</legend>
+        <label for="signature">Signature:</label>
+        <input type="file" id="signature" accept="image/*">
+      </fieldset>
+      <input type="submit" value="Generate Resume">
+      <button type="button" id="cancel">Cancel</button>
+    </form>
+    <div id="generatedResume"></div>
+  </div>
+  <script src="Js/script.js"></script>
+</body>
+</html>

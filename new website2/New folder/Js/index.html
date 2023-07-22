@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resume CV Builder</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Resume CV Builder</h1>
+  <form id="resume-form">
+    <h2>Personal Information</h2>
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" required>
+    </div>
+    <h2>Education</h2>
+    <div id="education-container">
+      <div class="entry education-entry">
+        <textarea class="form-control" required></textarea>
+        <button type="button" class="btn btn-sm btn-danger remove-entry">-</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-sm btn-primary add-entry">Add Education</button>
+    <h2>Experience</h2>
+    <div id="experience-container">
+      <div class="entry experience-entry">
+        <textarea class="form-control" required></textarea>
+        <button type="button" class="btn btn-sm btn-danger remove-entry">-</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-sm btn-primary add-entry">Add Experience</button>
+    <h2>Languages</h2>
+    <div id="languages-container">
+      <div class="entry languages-entry">
+        <textarea class="form-control" required></textarea>
+        <button type="button" class="btn btn-sm btn-danger remove-entry">-</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-sm btn-primary add-entry">Add Languages</button>
+    <h2>Skills</h2>
+    <div id="skills-container">
+      <div class="entry skills-entry">
+        <textarea class="form-control" required></textarea>
+        <button type="button" class="btn btn-sm btn-danger remove-entry">-</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-sm btn-primary add-entry">Add Skills</button>
+    <button type="button" id="print-button" class="btn btn-lg btn-primary">Generate PDF</button>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
